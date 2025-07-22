@@ -223,7 +223,11 @@ paths:
         - in: path
           name: job_id
           description: Identifier of the job for status request
-          example: rXEOAosN3L
+          ## Issue notified by Nichollette Acosta
+          ## If the example query is temporary or expires after a period of time, it may result in errors like this and affect your API’s uptime status.
+          ## The endpoint it queries: GET https://multiomics.rtx.ai:9990/PharmacogenomicsKG/asyncquery_status/rXEOAosN3L is failing probably due to the example no longer being available
+          ## To avoid this, we recommend either removing expired examples or replacing them with persistent queries that reliably return valid responses.
+          # example: rXEOAosN3L
           required: true
           schema:
             type: string
